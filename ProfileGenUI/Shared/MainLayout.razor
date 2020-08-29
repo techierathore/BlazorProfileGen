@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<Layout>
+    <LayoutHeader Fixed="true">
+        <Bar Style="height: 64px;" Breakpoint="Breakpoint.Desktop"
+             Background="Background.Primary">
+            <BarBrand>
+                <BarItem>
+                    Blazor Github Profile Generator
+                </BarItem>
+            </BarBrand>
+        </Bar>
+    </LayoutHeader>
+    <LayoutContent Padding="Padding.Is4.OnX">
+        @Body
+    </LayoutContent>
+</Layout>

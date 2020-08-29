@@ -1,0 +1,68 @@
+﻿@page "/"
+    <Row>
+        <Card Margin="Margin.Is4.OnY">
+            <CardHeader>Profile Sections</CardHeader>
+            <CardBody>
+                <Tabs @bind-SelectedTab="@DefaultTabName">
+                    <Items>
+                        <Tab Name="Header">Job Info</Tab>
+                        <Tab Name="EstimateNotes">Estimate Notes</Tab>
+                        <Tab Name="TimeCost">Time,Cost,Commission</Tab>
+                    </Items>
+                    <Content>
+                        <TabPanel Name="Header">
+                            <CardBody>
+
+
+                            </CardBody>
+                        </TabPanel>
+                        <TabPanel Name="EstimateNotes">
+                            <CardBody>
+
+                            </CardBody>
+                        </TabPanel>
+                        <TabPanel Name="Permitting">
+
+                        </TabPanel>
+                        <TabPanel Name="TimeCost">
+
+                        </TabPanel>
+                    </Content>
+                </Tabs>
+            </CardBody>
+        </Card>
+    </Row>
+    <Row>
+        <Column ColumnSize="ColumnSize.Is6.OnDesktop">
+            <Card Margin="Margin.Is4.OnY">
+                <CardHeader>
+                    <Row>
+                        <Column>
+                            <h6>
+                               Profile MarkUp Code
+                            </h6>
+                        </Column>
+                        <Column Class="d-flex" JustifyContent="JustifyContent.End">
+                            <div Margin="Margin.IsAuto.FromLeft">
+                                Download MarkUp
+                            </div>
+                        </Column>
+                    </Row>
+                </CardHeader>
+                <CardBody>
+                    <textarea class="form-control" style="height:350px;" @bind-value="ProfileBody" @bind-value:event="oninput"/>
+                </CardBody>
+            </Card>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is6.OnDesktop">
+            <Card Margin="Margin.Is4.OnY">
+                <CardHeader>Preview</CardHeader>
+                <CardBody>
+                    @((MarkupString) ProfilePreview)
+                </CardBody>
+            </Card>
+        </Column>
+    </Row>
+
+
+
